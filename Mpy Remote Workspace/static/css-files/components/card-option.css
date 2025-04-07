@@ -1,0 +1,68 @@
+.wrapper-option {
+  display: grid;
+  gap: 30px;
+  background-color: var(--color-bg-3);
+  border-radius: 20px;
+  padding: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.label-option {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-color: var(--color-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.boutton-checkbox {
+  background-color: var(--color-bg-button-rond-red);
+}
+
+.checkbox-x-text {
+  font-size: 16px;
+  text-align: center;
+  cursor: default;
+}
+
+.checkbox + .label-option .icon-x-unchecked,
+.checkbox + .label-option .icon-x-checked {
+  position: absolute;
+  -webkit-transition: opacity 0.125s ease-out;
+  transition: opacity 0.125s ease-out;
+  transition: opacity 0.125s ease-out;
+  transition: opacity 0.125s ease-out, -webkit-transform 0.125s ease-out;
+}
+.checkbox + .label-option .icon-x-unchecked {
+  opacity: 1;
+}
+.checkbox + .label-option .icon-x-checked {
+  opacity: 0;
+}
+.checkbox:checked + .label-option .icon-x-unchecked {
+  opacity: 0;
+}
+.checkbox:checked + .label-option .icon-x-checked {
+  opacity: 1;
+}
+.checkbox:checked + .label-option .boutton-checkbox {
+  background-color: var(--color-bg-button-rond-green);
+}
+
+.option-boutton {
+  background-color: var(--color-bg-button-rond-blue);
+}
+.supprimer-boutton {
+  background-color: var(--color-bg-button-rond-red);
+}
+.logout-boutton {
+  background-color: var(--color-bg-button-rond-blue);
+}

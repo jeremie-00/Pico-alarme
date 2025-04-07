@@ -1,0 +1,6 @@
+{"title" : "Garage" , 
+"autoModeBypass" : false , 
+"start" : "00:00" , 
+"auto" : false , 
+"end" : "07:00" , 
+"speak" : false}

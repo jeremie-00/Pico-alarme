@@ -1,0 +1,38 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/Pico alarme.code-workspace
+# env files (can opt-in for committing if needed)
+.env*
+users.json
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp
+*.swx
+
+# Dossiers spécifiques à l'environnement
+__pycache__/
+*.pyc
+
+# Fichiers de configuration de l'IDE
+.vscode/
+.idea/
+
+# Bibliothèques externes
+lib/
+
+# Dossier de build
+build/
+dist/
+
+# Fichiers générés (si vous compilez)
+*.hex
+*.uf2
+*.bin
+
+# Enregistrement des fichiers du terminal (logs)
+*.log
+
+# Fichiers de configuration de Git
+*.gitmodules
+

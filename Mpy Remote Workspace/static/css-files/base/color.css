@@ -1,0 +1,48 @@
+:root {
+  --color-icon-red: #ba4242;
+  --color-icon-green: #42ba42;
+  --color-icon-blue: #4781db;
+
+  --color-bg-tag-red: #ff00001a;
+  --color-bg-tag-green: #00ff001a;
+  --color-bg-tag-blue: #0d00ff1a;
+  --color-bg-gradient: linear-gradient(
+    180deg,
+    #2a2b38,
+    #3d3f53,
+    #3d3f53,
+    #2a2b38
+  );
+
+  --color-bg-button-rond-red: #530707;
+  --color-bg-button-rond-green: #044804;
+  --color-bg-button-rond-blue: #08044f;
+
+  --color-bg-button-modal: #1f2029;
+  --color-bg-button-modal-annuler: rgb(83, 47, 47);
+  --color-bg-button-modal-valider: rgb(47, 83, 73);
+
+  --color-bg: #2a2b38;
+  --img-bg: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
+
+  --color-bg-2: #626262;
+
+  /* bg card */
+  --color-bg-3: #8889ae3d;
+
+  --color-bg-hover: #ddd;
+
+  --color-border: #ffffff70;
+  --color-bg-line: #7272724d;
+
+  --color-text: #ffffff;
+  --color-text-login: #ffeba7;
+  --color-text-input: #c4c3ca;
+
+  --color-box-shadow: #1c1b1d;
+  --box-shadow: 0px 2px 3px 1px var(--color-box-shadow);
+
+  --color-toggle-modal: #000000b3;
+
+  --color-text-error: rgba(255, 0, 0, 0.79);
+}

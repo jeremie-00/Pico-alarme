@@ -1,0 +1,21 @@
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+#modal-modifier .form-modal {
+  gap: 5px;
+}
+#modal-supprimer .wrapper-button button,
+#modal-modifier .wrapper-button button {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-color: var(--color-bg-button-modal-annuler);
+}
+
+.wrapper-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

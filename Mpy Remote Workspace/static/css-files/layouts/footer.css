@@ -1,0 +1,15 @@
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--color-bg-gradient);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+footer h2 {
+  font-size: 16px;
+  padding: 30px;
+}

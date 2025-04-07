@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pico</title>
+    <link href="/static/image/icons8-tarte-aux-framboises-32.png" rel="icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap">
+    </noscript>
+    <link rel="preload" href="static/styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+
+<body class="body-image" style="background-color: #2a2b38;">
+
+    <div id="background"></div>
+
+    <div class='loader xl-loader' id="loader">
+
+    </div>
+
+    <div id="main" style="opacity: 0;">
+
+        <header class="header">
+
+            <nav class="navbar">
+                <ul>
+                    <li class="boutton-header boutton-rond">
+                        <a class="nav-link active" href="#accueil">
+                            <ion-icon name="shield-half-outline" class="icon-link"></ion-icon>
+                            <span class="sr-only">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="boutton-header boutton-rond">
+                        <a class="nav-link" href="#portes">
+                            <ion-icon name="key-outline" class="icon-link"></ion-icon>
+                            <span class="sr-only">Portes</span>
+                        </a>
+                    </li>
+                    <li class="boutton-header boutton-rond">
+                        <a class="nav-link" href="#historique">
+                            <ion-icon name="book-outline" class="icon-link"></ion-icon>
+                            <span class="sr-only">Historique</span>
+                        </a>
+                    </li>
+                    <li class="boutton-header boutton-rond">
+                        <a class="nav-link" href="#options">
+                            <ion-icon name="settings-outline" class="icon-link"></ion-icon>
+                            <span class="sr-only">Options</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+
+            <section id="accueil">
+                <h1 class="titre" id="title">Garage</h1>
+                <div class="card">
+                    <input name="switch" id="switch" type="checkbox" class="switch checkbox" />
+                    <label for="switch" class="label-switch">
+                        <div class="boutton-switch boutton-rond">
+                            <ion-icon name="shield-checkmark-outline" class="icon-card icon-x-checked"></ion-icon>
+                            <ion-icon name="shield-outline" class="icon-card icon-x-unchecked"></ion-icon>
+                        </div>
+
+                        <div class="wrapper-txt-switch">
+                            <span class="switch-x-text">Surveillance </span>
+                            <span class="switch-x-toggletext">
+                                <span class="switch-x-checked">Activer</span>
+                                <span class="switch-x-unchecked">Désactiver</span>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="card card-plage">
+                    <div class="container-collaps">
+                        <div class="collaps-auto">
+                            <h2 class="title-plage"></h2>
+                            <ion-icon id="arrow-collaps" name="chevron-up-outline"
+                                class="icon-card arrow-collaps"></ion-icon>
+                        </div>
+                        <div class="content-collaps">
+                            <div class="content">
+                                <form class="form-auto" id="form-auto">
+                                    <input name="switch-auto" id="auto" type="checkbox" class="switch checkbox" />
+                                    <label for="auto" class="label-switch label-auto">
+                                        <div class="boutton-switch boutton-rond hidden">
+                                            <ion-icon name="checkmark-outline"
+                                                class="icon-card icon-x-checked"></ion-icon>
+                                            <ion-icon name="close-outline"
+                                                class="icon-card icon-x-unchecked"></ion-icon>
+                                        </div>
+                                        <div class="wrapper-txt-switch">
+                                            <span class="switch-x-toggletext">
+                                                <span class="switch-x-checked">Activer</span>
+                                                <span class="switch-x-unchecked">Désactiver</span>
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <div class="temps-auto">
+                                        <label class="text-potl" for="start">De : </label>
+                                        <input class="input-select chrono" id="start" type="time" name="start"
+                                            value="00:00" step="0" />
+                                    </div>
+                                    <div class="temps-auto">
+                                        <label class="text-potl" for="end">jusqu'à : </label>
+                                        <input class="input-select chrono" id="end" type="time" name="end" value="00:00"
+                                            step="0" />
+                                    </div>
+
+
+
+                                    <div class="wrapper-button wrapper-button-auto">
+                                        <button type="submit" class="button valider "><ion-icon
+                                                name="checkmark-circle-outline"
+                                                class="color-icon-valide"></ion-icon>Valider</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="portes">
+                <h2>Portes</h2>
+                <div class="section-chkpts" id="sectionChkpts">
+                </div>
+            </section>
+            <section id="historique">
+                <h2>Historique</h2>
+                <div class="card-historiques">
+                    <div class="view" id="view-historique"></div>
+
+                </div>
+
+            </section>
+            <section id="options">
+                <h2>
+                    Options
+                </h2>
+                <div class="wrapper-option">
+
+                    <div class="card-option">
+                        <input value="private" name="checkbox" id="speak" type="checkbox" class="checkbox">
+                        <div class="label-option">
+                            <label for="speak" class="boutton-checkbox boutton-rond ">
+                                <span class="sr-only">Toggle sound</span>
+                                <ion-icon name="volume-mute-outline" class="icon-card icon-x-unchecked"></ion-icon>
+                                <ion-icon name="volume-high-outline" class="icon-card icon-x-checked"></ion-icon>
+                            </label>
+                            <span class="checkbox-x-text">Annonce</span>
+                        </div>
+                    </div>
+                    <div class="card-option">
+                        <div class="label-option">
+
+                            <button class="option-boutton boutton-rond " id="edit-title"
+                                aria-labelledby="edit-title-label">
+                                <ion-icon name="pencil-outline" class="icon-card"></ion-icon>
+                            </button>
+                            <label id="edit-title-label" for="edit-title" class="checkbox-x-text">Édit titre</label>
+                        </div>
+                    </div>
+                    <div class="card-option">
+                        <div class="label-option">
+                            <button class="option-boutton boutton-rond " id="ajouter" aria-labelledby="ajouter-label">
+                                <ion-icon name="add-outline" class="icon-card"></ion-icon>
+                            </button>
+                            <label id="ajouter-label" for="ajouter" class="checkbox-x-text">Ajouter</label>
+                        </div>
+                    </div>
+                    <div class="card-option">
+                        <div class="label-option">
+                            <button class="option-boutton boutton-rond " id="modifier" aria-labelledby="modifier-label">
+                                <ion-icon name="build-outline" class="icon-card"></ion-icon>
+                            </button>
+                            <label id="modifier-label" for="modifier" class="checkbox-x-text">Modifier</label>
+                        </div>
+                    </div>
+                    <div class="card-option">
+                        <div class="label-option">
+                            <button class="supprimer-boutton boutton-rond " id="supprimer"
+                                aria-labelledby="supprimer-label">
+                                <ion-icon name="trash-outline" class="icon-card"></ion-icon>
+                            </button>
+                            <label id="supprimer-label" for="supprimer" class="checkbox-x-text">Supprimer</label>
+
+                        </div>
+                    </div>
+                    <div class="card-option">
+                        <div class="label-option">
+                            <button class="logout-boutton boutton-rond " id="logout" aria-labelledby="logout-label">
+                                <ion-icon name="log-out-outline" class="icon-card"></ion-icon>
+                            </button>
+                            <label id="logout-label" for="logout" class="checkbox-x-text">Logout</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h2>Raspidefbox &copy;</h2>
+            <span id="memory"></span>
+        </footer>
+    </div>
+
+    <dialog id="modal-title" class="modal">
+        <section class="wrapper-modal">
+            <ion-icon name="pencil-outline" class="icon-modal"></ion-icon>
+            <h2 class="h2-modal">Edit title</h2>
+            <form class="form-modal" id="form-title">
+                <label for="edit-title-modal" class="sr-only">Titre :</label>
+                <input id="edit-title-modal" name="title" type="text" class="input-select">
+                <div class="wrapper-button">
+                    <button type="submit" class="button valider "><ion-icon name="checkmark-circle-outline"
+                            class="color-icon-valide"></ion-icon>Valider</button>
+                    <button class="button annuler " data-id="modal-title"> <ion-icon name="close-circle-outline"
+                            class="color-icon-annule"></ion-icon>Annuler</button>
+                </div>
+            </form>
+        </section>
+    </dialog>
+
+    <dialog id="modal-ajouter" class="modal">
+        <section class="wrapper-modal">
+            <ion-icon name="add-outline" class="icon-modal"></ion-icon>
+            <h2 class="h2-modal">Ajouter un point de controle</h2>
+            <form class="form-modal" id="form-ajouter">
+                <label for="ajout-name-modal" class="sr-only">Name :</label>
+                <input id="ajout-name-modal" name="name" type="text" class="input-select" placeholder="Name" required>
+                <label for="choixGpio-ajout" class="sr-only">Choix GPIO :</label>
+                <select id="choixGpio-ajout" class='input-select' name="choixGpio"></select>
+
+                <div class="potl">
+                    <fieldset> <!-- Ajout du fieldset -->
+                        <legend class="sr-only">Option</legend>
+                        <!-- Légende facultative pour décrire le groupe de radios -->
+
+                        <div class="card-potl">
+                            <input type="radio" name="rdo" id="yes-ajouter" value="true">
+                            <input type="radio" name="rdo" id="no-ajouter" value="false" checked>
+                            <div class="input-potl">
+                                <div class="toggle-radio">
+                                    <div class="switch-radio">
+                                        <label for="yes-ajouter" class="label-potl">
+                                            Yes
+                                            <ion-icon name="checkmark-circle-outline"
+                                                class="color-icon-valide icon"></ion-icon>
+                                        </label>
+                                        <div class="text-potl">
+                                            POTL
+                                        </div>
+                                        <label for="no-ajouter" class="label-potl">
+                                            <ion-icon name="close-circle-outline"
+                                                class="color-icon-annule icon"></ion-icon>
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="temps-potl">
+                                <label class="text-potl" for="chrono-add">Temporisation</label>
+                                <input class="input-select chrono" id="chrono-add" type="time" name="chrono"
+                                    value="00:00:00" step="2" />
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+
+                <div class="wrapper-button">
+                    <button type="submit" class="button valider "><ion-icon name="checkmark-circle-outline"
+                            class="color-icon-valide"></ion-icon>Valider</button>
+                    <button class="button annuler " data-id="modal-ajouter"> <ion-icon name="close-circle-outline"
+                            class="color-icon-annule"></ion-icon>Annuler</button>
+                </div>
+            </form>
+        </section>
+    </dialog>
+
+    <dialog id="modal-modification" class="modal">
+        <section class="wrapper-modal">
+            <ion-icon name="build-outline" class="icon-modal"></ion-icon>
+            <div class="wrapper-txt">
+                <h2 class="h2-modal">Modification</h2>
+                <div class="name-title modif"></div>
+            </div>
+
+            <form class="form-modal" id="form-modification">
+                <label for="modifier-name-modal" class="sr-only">Name :</label>
+                <input id="modifier-name-modal" name="name" type="text" class="input-select" placeholder="Name">
+                <label for="choixGpio-modif" class="sr-only">Choix GPIO :</label>
+                <select id="choixGpio-modif" class='input-select' name="choixGpio"></select>
+
+                <div class="potl">
+                    <fieldset> <!-- Ajout du fieldset -->
+                        <legend class="sr-only">Option</legend>
+                        <!-- Légende facultative pour décrire le groupe de radios -->
+                        <div class="card-potl">
+                            <input type="radio" name="rdo" id="yes-modification" value="true">
+                            <input type="radio" name="rdo" id="no-modification" value="false">
+                            <div class="input-potl">
+                                <div class="toggle-radio">
+
+                                    <div class="switch-radio">
+                                        <label for="yes-modification" class="label-potl">
+                                            Yes
+                                            <ion-icon name="checkmark-circle-outline" class="color-icon-valide icon">
+                                            </ion-icon>
+                                        </label>
+                                        <div class="text-potl">
+                                            POTL
+                                        </div>
+                                        <label for="no-modification" class="label-potl">
+                                            <ion-icon name="close-circle-outline" class="color-icon-annule icon">
+                                            </ion-icon>
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="temps-potl">
+                                <label class="text-potl" for="chrono-del">Temporisation</label>
+                                <input class="input-select chrono" id="chrono-del" type="time" name="chrono"
+                                    value="00:00:00" step="2" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <div class="wrapper-button">
+                    <button type="submit" class="button valider " id="validerModification"><ion-icon
+                            name="checkmark-circle-outline" class="color-icon-valide"></ion-icon>Valider</button>
+                    <button class="button annuler " data-id="modal-modification"> <ion-icon name="close-circle-outline"
+                            class="color-icon-annule"></ion-icon>Annuler</button>
+                </div>
+            </form>
+        </section>
+    </dialog>
+
+    <dialog id="modal-modifier" class="modal">
+        <section class="wrapper-modal">
+            <ion-icon name="build-outline" class="icon-modal"></ion-icon>
+            <h2 class="h2-modal">Modifier</h2>
+            <div class="view" id="viewModifier">
+            </div>
+
+            <div class="wrapper-button">
+                <button class="button annuler " data-id="modal-modifier"> <ion-icon name="exit-outline"
+                        class="color-icon-annule"></ion-icon>Quitter</button>
+            </div>
+
+        </section>
+    </dialog>
+
+    <dialog id="modal-supprimer" class="modal">
+        <section class="wrapper-modal">
+
+            <ion-icon name="trash-outline" class="icon-modal"></ion-icon>
+
+            <h2 class="h2-modal">Supprimer</h2>
+
+            <div class="view" id="viewSupprimer">
+
+            </div>
+
+            <div class="wrapper-button">
+                <button class="button annuler " data-id="modal-supprimer"> <ion-icon name="exit-outline"
+                        class="color-icon-annule"></ion-icon>Quitter</button>
+            </div>
+
+
+        </section>
+    </dialog>
+
+    <dialog id="modal-info" class="modal">
+        <section class="wrapper-modal">
+            <ion-icon class="close-icon" name="close-circle-outline"></ion-icon>
+            <ion-icon name="information-outline" class="icon-modal"></ion-icon>
+
+            <h2 class="h2-modal">Information</h2>
+            <div class="chkpt-info"></div>
+        </section>
+    </dialog>
+
+</body>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+<script type="module" src="static/loader.js" defer></script>
+<script type="module" src="static/index.js" defer></script>
+
+
+</html>

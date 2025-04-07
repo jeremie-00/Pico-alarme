@@ -1,0 +1,208 @@
+.modal {
+  margin: auto;
+  background-color: var(--color-bg);
+  background-image: var(--img-bg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  border-radius: 20px;
+  border: none;
+  color: var(--color-text);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--box-shadow);
+}
+.modal .view {
+  height: 258px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+#modal-modification .wrapper-txt {
+  flex: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.name-title {
+  align-self: center;
+}
+#modal-info {
+  outline: none;
+}
+#modal-info .wrapper-modal {
+  gap: 20px;
+}
+#modal-info .icon-modal {
+  width: 40px;
+  height: 40px;
+}
+.close-icon {
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+dialog::backdrop {
+  background: #0000009c;
+}
+.wrapper-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  height: auto;
+  padding: 15px;
+}
+
+.icon-modal {
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  padding: 15px;
+  outline: none;
+}
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.wrapper-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.wrapper-button .button {
+  padding: 5px 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  color: var(--color-text);
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.wrapper-button .annuler {
+  background-color: var(--color-bg-button-modal-annuler);
+}
+.wrapper-button .valider {
+  background-color: var(--color-bg-button-modal-valider);
+}
+.color-icon-valide {
+  color: var(--color-icon-green);
+  font-size: 30px;
+}
+.color-icon-annule {
+  color: var(--color-icon-red);
+  font-size: 30px;
+}
+.modal fieldset {
+  border: none;
+}
+
+.potl {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px 0;
+}
+.card-potl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.input-potl,
+.temps-potl,
+.toggle-radio,
+.switch-radio {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.input-potl .input {
+  margin-right: 3px;
+}
+
+.h2-modal {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 100;
+}
+
+.input-select {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 0px 5px;
+  color: var(--color-text-input);
+  background-color: var(--color-bg-button-modal);
+  outline: none;
+  font-size: 18px;
+}
+.chrono {
+  width: 140px;
+  height: 40px;
+  color: var(--color-text);
+  font-size: 18px;
+  text-align: center;
+  font-weight: 100;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.switch-radio label {
+  cursor: pointer;
+  color: var(--color-toggle-modal);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /*   transition: color 0.2s ease; */
+}
+.switch-radio .icon {
+  width: 30px;
+  height: 30px;
+}
+
+#yes-ajouter:checked ~ .input-potl label[for="yes-ajouter"],
+#yes-modification:checked ~ .input-potl label[for="yes-modification"],
+#no-ajouter:checked ~ .input-potl label[for="no-ajouter"],
+#no-modification:checked ~ .input-potl label[for="no-modification"] {
+  color: var(--color-text);
+}
+#yes-ajouter:not(:checked) ~ .input-potl .color-icon-valide,
+#yes-modification:not(:checked) ~ .input-potl .color-icon-valide,
+#no-ajouter:not(:checked) ~ .input-potl .color-icon-annule,
+#no-ajouter:checked ~ .input-potl .text-potl,
+#no-ajouter:checked ~ .temps-potl .text-potl,
+#no-modification:not(:checked) ~ .input-potl .color-icon-annule,
+#no-modification:checked ~ .input-potl .text-potl,
+#no-modification:checked ~ .temps-potl .text-potl {
+  color: var(--color-toggle-modal);
+}
+#no-ajouter:checked ~ .temps-potl .chrono,
+#no-modification:checked ~ .temps-potl .chrono {
+  background-color: transparent;
+  pointer-events: none;
+  color: var(--color-toggle-modal);
+}

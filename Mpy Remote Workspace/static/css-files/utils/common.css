@@ -1,0 +1,78 @@
+/* Common styles */
+#accueil,
+#portes,
+#options,
+#historique {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.wrapper-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  flex: 1;
+}
+
+.icon-card {
+  width: 25px;
+  height: 25px;
+}
+
+.boutton-rond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  box-shadow: var(--box-shadow);
+  color: var(--color-text);
+  cursor: pointer;
+  position: relative;
+}
+
+.boutton-rond[disabled] {
+  background-color: #171717;
+  color: #6a6a6a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.card {
+  background-color: var(--color-bg-3);
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.boutton-carre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  color: var(--color-text);
+  background-color: rgb(82, 80, 121);
+  cursor: pointer;
+  outline: none;
+}
+.view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 488px;
+  overflow-y: auto;
+  width: 100%;
+  padding: 15px 0px;
+}

@@ -1,0 +1,32 @@
+.wrapper-tag {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.tag-red {
+  background-color: var(--color-bg-tag-red);
+}
+
+.tag-red .icon-card {
+  color: var(--color-icon-red);
+}
+
+.tag-green {
+  background-color: var(--color-bg-tag-green);
+}
+
+.tag-green .icon-card {
+  color: var(--color-icon-green);
+}
+
+.tag-blue {
+  background-color: var(--color-bg-tag-blue);
+}
+
+.tag-blue .icon-card {
+  color: var(--color-icon-blue);
+}

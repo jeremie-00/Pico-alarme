@@ -1,0 +1,166 @@
+.boutton-switch {
+  background-color: var(--color-bg-button-rond-red);
+  position: relative;
+}
+.switch + .label-switch .icon-x-unchecked,
+.switch + .label-switch .icon-x-checked {
+  position: absolute;
+  -webkit-transition: opacity 0.125s ease-out, transform 0.125s ease-out;
+  transition: opacity 0.125s ease-out, transform 0.125s ease-out;
+}
+.switch + .label-switch .icon-x-unchecked {
+  opacity: 1;
+}
+.switch + .label-switch .icon-x-checked {
+  opacity: 0;
+}
+.switch:checked + .label-switch .icon-x-unchecked {
+  opacity: 0;
+}
+.switch:checked + .label-switch .icon-x-checked {
+  opacity: 1;
+}
+.switch:checked + .label-switch .boutton-switch {
+  background-color: var(--color-bg-button-rond-green);
+}
+.switch .icon-x-unchecked {
+  color: var(--color-icon-red);
+}
+.switch .icon-x-checked {
+  color: var(--color-icon-green);
+}
+.label-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  gap: 30px;
+}
+
+.card-plage {
+  padding: unset;
+}
+.container-collaps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.collaps-auto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+}
+.title-plage {
+  font-size: 20px;
+  font-weight: 300;
+}
+.arrow-collaps {
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+}
+.rotate {
+  transform: rotate(-180deg);
+}
+.label-auto {
+  width: auto;
+}
+
+.hidden {
+  visibility: hidden;
+  transition: visibility 0s linear;
+}
+.content-collaps {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.2s linear;
+  width: 100%;
+}
+
+.visible {
+  visibility: visible;
+  grid-template-rows: 1fr;
+}
+
+.content {
+  align-self: end;
+  min-height: 0;
+}
+.form-auto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding: 15px;
+  padding-top: 0;
+}
+
+.temps-auto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  gap: 5px;
+}
+.wrapper-button-auto {
+  flex: 1;
+}
+
+.switch + .label-switch .switch-x-text {
+  display: block;
+  margin-right: 0.3em;
+}
+.wrapper-txt-switch {
+  display: flex;
+  flex: 1;
+}
+.switch + .label-switch .switch-x-toggletext {
+  display: flex;
+  font-weight: bold;
+  height: 25px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.switch + .label-switch .switch-x-unchecked,
+.switch + .label-switch .switch-x-checked {
+  left: 0;
+  position: absolute;
+  top: -1px;
+  -webkit-transition: opacity 0.125s ease-out, -webkit-transform 0.125s ease-out;
+  transition: opacity 0.125s ease-out, -webkit-transform 0.125s ease-out;
+  transition: transform 0.125s ease-out, opacity 0.125s ease-out;
+  transition: transform 0.125s ease-out, opacity 0.125s ease-out,
+    -webkit-transform 0.125s ease-out;
+}
+.switch + .label-auto .switch-x-unchecked,
+.switch + .label-auto .switch-x-checked {
+  right: 10px;
+  left: unset;
+}
+.switch + .label-switch .switch-x-unchecked {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.switch + .label-switch .switch-x-checked {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+.switch:checked + .label-switch .switch-x-unchecked {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+.switch:checked + .label-switch .switch-x-checked {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}

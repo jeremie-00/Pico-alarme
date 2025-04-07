@@ -1,0 +1,18 @@
+:root {
+  --color-box-light0: #ac0000;
+  --color-box-light1: #ff9966;
+  --color-box-light2: #219b03;
+  --color-box-light2-table: #065b17c7;
+  --color-box-light3: #6600ff;
+  --color-box-light4: #6600ff9d;
+  --color-bg: #202124;
+  --color-bg-2: #28282b;
+  --color-bg-3: #4e4f53;
+  --color-bg-hover: #ddd;
+  --color-border: #424040;
+  --color-bg-line: rgba(114, 114, 114, 0.3);
+  --color-text: #ffffff;
+
+  --color-box-shadow: #1c1b1d;
+  --box-shadow: 0px 2px 3px 1px var(--color-box-shadow);
+}

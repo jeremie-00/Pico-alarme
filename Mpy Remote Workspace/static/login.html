@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pico login</title>
+    <link rel="stylesheet" type="text/css" href="static/css-files/components/loader.css" />
+    <link rel="stylesheet" type="text/css" href="static/styles.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link href="/static/image/icons8-tarte-aux-framboises-32.png" rel="icon" type="image/x-icon">
+</head>
+
+<body style="background-color: #202124;">
+    <div class='loader xl-loader' id="loader"></div>
+    <main id='main' style="opacity: 0;">
+
+        <div class="card-front">
+            <form action="/login" method="post" class="section text-center">
+                <ion-icon name="person-outline" class="icon-header"></ion-icon>
+                <div class="form-group">
+                    <input type="text" id="username" name="username" class="form-style" placeholder="Name"
+                        autocomplete="off" required>
+                    <ion-icon name="person-outline" class="input-icon"></ion-icon>
+                </div>
+                <div class="form-group mt-2">
+                    <input type="password" name="password" class="form-style" placeholder="Password" id="password"
+                        autocomplete="off" required>
+                    <ion-icon name="key-outline" class="input-icon"></ion-icon>
+                </div>
+                <p class="error">{message}</p>
+                <button type="submit" class="btn mt-4 clickable">
+                    <ion-icon name="log-in-outline" class="icon-card margin-right-5"></ion-icon>Login
+                </button>
+            </form>
+        </div>
+
+
+</body>
+
+</main>
+
+<script type="module" src="static/loader.js"></script>
+</body>
+
+</html>
